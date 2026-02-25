@@ -10,8 +10,8 @@ class patient(models.Model):
     dateregistered = models.DateTimeField()
     medicalhistory = models.TextField()
 
-def __str__(self):
-    return self.firstname + self.lastname
+    def __str__(self):
+         return self.firstname + self.lastname
 
 
 
@@ -21,10 +21,10 @@ class MyAppointments(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20)
     datetime = models.DateTimeField()
-    departments = models.CharField(max_length=10)
+    department = models.CharField(max_length=10)
     doctor = models.CharField(max_length=100)
     message = models.TextField()
 
-def __str__(self):
-    return self.name
+    def __str__(self):
+         return self.name
 

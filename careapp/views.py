@@ -8,9 +8,16 @@ def index(request) :
 def starter(request) :
     return render(request, 'starter-page.html')
 
+def about(request):
+    return render(request, 'appointment.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+
 def appointment(request) :
 
-    if request.method == 'POST':
+    if request.method == 'POST' :
         all = MyAppointments(
             name = request.POST['name'],
             email = request.POST['email'],
@@ -19,7 +26,6 @@ def appointment(request) :
             department = request.POST['department'],
             doctor = request.POST['doctor'],
             message = request.POST['message'],
-
         )
 
         all.save()
@@ -30,8 +36,11 @@ def appointment(request) :
       return render(request, 'appointment.html')
 
 
-def about(request):
-    return render(request, 'about.html')
+def show(request):
+    allappointments = MyAppointments.objects.all()
+    return render(request, 'show.html', {'allappointments': allappointments})
+
+
 
 
 
