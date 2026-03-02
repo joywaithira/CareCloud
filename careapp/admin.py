@@ -4,3 +4,4 @@ from .models import *
 # Register your models here.
 admin.site.register(patient)
 admin.site.register(MyAppointments)
+admin.site.register(Transaction)
