@@ -15,6 +15,7 @@ urlpatterns = [
 
 
 
+
     #Mpesa URLS
     path('pay/', views.pay, name='pay'),
 
@@ -22,6 +23,11 @@ urlpatterns = [
     path('token/', views.token, name='token'),
     path('payment-result/', views.payment_result, name='payment_result'),
     path('transactions/', views.transactions_list, name='transactions'),
+
+#Authentication
+    path('register/', views.register, name='register'),
+    path('login/', views.login, name='login'),
+
 
 
 ]
